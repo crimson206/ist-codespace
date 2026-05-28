@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash(npm install)",
+      "Bash(npm run *)",
+      "Bash(npx tsc *)",
+      "Bash(node *)",
+      "Bash(git *)",
+      "Bash(isesh *)",
+      "Bash(imessenger *)",
+      "Bash(smon *)"
+    ]
+  },
+  "instructions": "This is a multi-package monorepo with shared, api, and web packages. The shared package exports types and utilities used by api and web. Coordinate changes across packages with dependency awareness — shared must be updated before its consumers."
+}

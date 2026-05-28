@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash(npm install)",
+      "Bash(npm run *)",
+      "Bash(npx tsc *)",
+      "Bash(node *)",
+      "Bash(git *)",
+      "Bash(isesh *)",
+      "Bash(imessenger *)",
+      "Bash(smon *)"
+    ]
+  },
+  "instructions": "This is a TDA (Task-Driven Architecture) project with a React frontend and Express backend. The manager coordinates workers. Use isesh and imessenger for session management."
+}

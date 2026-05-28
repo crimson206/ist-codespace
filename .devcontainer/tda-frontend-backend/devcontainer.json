@@ -1,0 +1,23 @@
+{
+  "name": "IST TDA: Frontend + Backend",
+  "image": "crimson206/ist-base:latest",
+  "workspaceFolder": "/workspaces/ist-codespace/examples/tda-frontend-backend",
+  "postCreateCommand": "echo '✅ IST TDA environment ready! Read manager-prompt.md to start a manager session.' && ist-setup install --silent 2>/dev/null || true",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+      },
+      "extensions": [
+        "anthropic.claude-code"
+      ]
+    }
+  },
+  "features": {},
+  "remoteEnv": {
+    "ANTHROPIC_API_KEY": "${localEnv:ANTHROPIC_API_KEY}"
+  },
+  "forwardPorts": [3000, 4000]
+}

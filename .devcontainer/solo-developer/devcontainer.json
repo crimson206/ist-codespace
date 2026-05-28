@@ -1,0 +1,23 @@
+{
+  "name": "IST Solo Developer",
+  "image": "crimson206/ist-base:latest",
+  "workspaceFolder": "/workspaces/ist-codespace/examples/solo-developer",
+  "postCreateCommand": "echo '✅ IST environment ready! Open guide/README.md to get started.' && ist-setup install --silent 2>/dev/null || true",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+      },
+      "extensions": [
+        "anthropic.claude-code"
+      ]
+    }
+  },
+  "features": {},
+  "remoteEnv": {
+    "ANTHROPIC_API_KEY": "${localEnv:ANTHROPIC_API_KEY}"
+  },
+  "forwardPorts": [3000]
+}

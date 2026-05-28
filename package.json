@@ -1,0 +1,18 @@
+{
+  "name": "@anthropic/ist-codespace",
+  "version": "0.1.0",
+  "description": "GitHub Codespace template for Integrated Session Tools — a one-click IST playground with guides and example projects",
+  "private": true,
+  "keywords": [
+    "ist",
+    "codespace",
+    "claude",
+    "ai-development",
+    "session-tools"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anthropic/ist-codespace"
+  }
+}

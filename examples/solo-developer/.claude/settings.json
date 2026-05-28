@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash(npm install)",
+      "Bash(npm run *)",
+      "Bash(npx tsc *)",
+      "Bash(node *)",
+      "Bash(git *)"
+    ]
+  },
+  "instructions": "You are working on a small todo app. Focus on clean TypeScript code with proper types. Run `npx tsc --noEmit` to check for type errors after making changes."
+}
