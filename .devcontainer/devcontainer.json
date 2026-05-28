@@ -1,0 +1,9 @@
+{
+  "name": "IST Workshop - Build a CLI with AI Agents",
+  "image": "crimson206/ist-base:latest",
+  "workspaceFolder": "/workspaces/ist-codespace",
+  "remoteEnv": {
+    "ANTHROPIC_API_KEY": "${localEnv:ANTHROPIC_API_KEY}"
+  },
+  "postCreateCommand": "echo '\\n Welcome to the IST Workshop!\\n Start here: guide/README.md\\n'"
+}

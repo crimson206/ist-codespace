@@ -1,86 +1,29 @@
-# Start Here: IST in 5 Minutes
+# Build a CLI Tool in 30 Minutes Using AI Agents
 
-## What is IST?
+Welcome to the IST Workshop. You'll use AI agent sessions to build **quicktool**, a developer utility CLI, without writing code yourself.
 
-**Integrated Session Tools** (IST) is a session management layer for Claude Code that enables multi-agent development workflows. Instead of one AI assistant, you can run multiple Claude Code sessions that communicate with each other — a manager that delegates tasks to specialized workers.
+## What You'll Learn
 
-IST gives you:
-- **Session management** (`isesh`) — start, stop, and monitor Claude Code sessions
-- **Inter-session messaging** (`imessenger`) — sessions can send messages to each other
-- **Skill kits** (`skit`) — shared prompts and tools across sessions
-- **Session monitoring** (`smon`) — watch session activity in real-time
+- **IST Sessions** - Start and manage AI coding sessions with `isesh`
+- **TDA Pattern** - The Manager-Worker pattern where a manager session delegates tasks to worker sessions
+- **Real-time Monitoring** - Watch multiple AI agents build code simultaneously with `smon` and `ilogsession`
 
 ## Prerequisites
 
-- A **GitHub account** (you're already in a Codespace, so you have this)
-- An **Anthropic API key** — set it as a Codespace secret named `ANTHROPIC_API_KEY`
+- A GitHub account (you're already in a Codespace, so you have this)
+- An Anthropic API key (`ANTHROPIC_API_KEY`)
 
-## Choose Your Path
+## Time
 
-This playground has three example projects, each progressively more complex:
+~30 minutes
 
-### Path 1: Solo Developer (Start here)
-**Time:** 5 minutes | **Sessions:** 1
+## Workshop Steps
 
-A single Claude Code session working on a todo app. Learn the basics of IST session management.
+1. [Explore the project](step-1-explore.md) - Understand what you're building
+2. [Start the manager](step-2-start-manager.md) - Launch a TDA manager session
+3. [Create workers](step-3-create-workers.md) - Watch the manager delegate work
+4. [Monitor progress](step-4-monitor.md) - See agents build in real-time
+5. [Review and test](step-5-review-test.md) - Try the finished CLI tool
+6. [What's next](step-6-whats-next.md) - Install IST on your own machine
 
-[Go to guide: First Session](./01-first-session.md)
-
-### Path 2: TDA Frontend + Backend
-**Time:** 15 minutes | **Sessions:** 3 (1 manager + 2 workers)
-
-A manager session coordinates a frontend worker and a backend worker. Learn the Task-Driven Architecture (TDA) pattern.
-
-[Go to guide: Manager-Worker Pattern](./02-manager-worker.md)
-
-### Path 3: Monorepo Manager
-**Time:** 20 minutes | **Sessions:** 4 (1 manager + 3 workers)
-
-Coordinate changes across shared library, API, and web packages. Learn multi-project coordination.
-
-[Go to guide: Multi-Project](./03-multi-project.md)
-
-## Quick Verification
-
-Before diving in, verify IST is working:
-
-```bash
-# Check IST tools are installed
-isesh --version
-imessenger --version
-skit prompt list
-
-# Check Claude Code is available
-claude --version
-
-# Check your API key is set
-echo $ANTHROPIC_API_KEY | head -c 10
-# Should print "sk-ant-..." (first 10 chars)
-```
-
-If any command fails, run:
-```bash
-ist-setup install
-```
-
-## How It All Fits Together
-
-```
-You (developer)
- |
- ├── isesh start manager    # Start a manager session
- |    |
- |    ├── isesh start worker-1   # Manager starts workers
- |    ├── isesh start worker-2
- |    |
- |    ├── imessenger send worker-1 "Build the login page"
- |    └── imessenger send worker-2 "Build the API endpoint"
- |
- └── smon                   # You monitor everything
-```
-
-The manager reads a prompt file that tells it what to build, then it creates worker sessions and delegates tasks. Workers report back to the manager when done.
-
-## Next Step
-
-Start with [01-first-session.md](./01-first-session.md) — you'll have a Claude session running in under 2 minutes.
+Start with [Step 1: Explore the project](step-1-explore.md).
