@@ -11,7 +11,20 @@ Welcome to the IST Workshop. You'll use AI agent sessions to build **quicktool**
 ## Prerequisites
 
 - A GitHub account (you're already in a Codespace, so you have this)
-- An Anthropic API key (`ANTHROPIC_API_KEY`)
+- An account for a CLI AI tool (Claude, Codex, Gemini, etc.)
+
+## Log In to Your CLI AI Tool
+
+The CLI AI tools come pre-installed in this Codespace, but you need to log in
+yourself before the agents can run. Open a terminal and start your tool:
+
+```bash
+claude
+```
+
+Follow the login prompt (a Claude Max subscription works — no API key required).
+You can also run `claude login` directly. Other tools work the same way, e.g.
+`codex` or `gemini`.
 
 ## Time
 
