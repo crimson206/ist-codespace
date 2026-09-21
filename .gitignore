@@ -1,0 +1,12 @@
+# Never commit secrets or registry config
+.npmrc
+**/.npmrc
+.env
+.env.*
+*.token
+*.secret
+
+# Node / editor cruft
+node_modules/
+.DS_Store
+*.log
