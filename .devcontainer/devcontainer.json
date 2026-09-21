@@ -1,6 +1,20 @@
 {
   "name": "IST Workshop - Build a CLI with AI Agents",
-  "image": "crimson206/ist-base:latest",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   "workspaceFolder": "/workspaces/ist-codespace",
-  "postCreateCommand": "echo '\\n Welcome to the IST Workshop!\\n Start here: guide/README.md\\n'"
+  "remoteUser": "node",
+
+  // Everything heavy (claude-code, snapshot, `snapshot install @ist/beta`) is
+  // baked into the image via the Dockerfile, so Codespaces Prebuild caches it
+  // and re-opening is fast. postAttachCommand only prints the welcome/next-steps
+  // banner — it must stay lightweight because it runs on every attach.
+  "postAttachCommand": "bash .devcontainer/welcome.sh",
+
+  "customizations": {
+    "vscode": {
+      "extensions": []
+    }
+  }
 }

@@ -23,8 +23,17 @@ claude
 ```
 
 Follow the login prompt (a Claude Max subscription works — no API key required).
-You can also run `claude login` directly. Other tools work the same way, e.g.
+You can also run `claude login` directly, or use an API key instead with
+`export ANTHROPIC_API_KEY=sk-ant-...`. Other tools work the same way, e.g.
 `codex` or `gemini`.
+
+**Optional — live monitoring & auto-approval:** the real-time monitoring tools
+(`smon`) can auto-approve agent prompts once you link this Codespace to your IST
+account with a one-time interactive Google sign-in:
+
+```bash
+detector-agent login
+```
 
 ## Time
 
