@@ -2,13 +2,18 @@
 
 **Goal:** Launch a TDA manager session that will coordinate the build.
 
-## Set Your API Key
+## Log In to Claude
 
-If you haven't already, export your Anthropic API key:
+If you haven't already, authenticate the Claude CLI. Use **either** option:
 
 ```bash
+claude login                      # Claude Pro/Max subscription (no API key)
+# ...or, with an API key instead:
 export ANTHROPIC_API_KEY=sk-ant-...
 ```
+
+(Optional) To enable live monitoring / auto-approval, run the one-time Google
+sign-in: `detector-agent login`.
 
 ## Start the Manager Session
 
